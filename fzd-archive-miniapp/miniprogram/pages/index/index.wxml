@@ -1,0 +1,18 @@
+<view class="container">
+  <view class="header">
+    <!-- Use a default image if head.png doesn't exist or use one from migrated assets -->
+    <image class="logo" src="/images/img/减肥梗.jpg" mode="aspectFill"></image>
+    <text class="title">樊振东档案</text>
+    <text class="subtitle">记录樊振东的乒乓球生涯与精彩时刻</text>
+  </view>
+  
+  <view class="category-grid">
+    <view class="category-item" wx:for="{{categories}}" wx:key="id" bindtap="onCategoryTap" data-category="{{item.id}}">
+      <view class="category-content">
+        <text class="category-name">{{item.name}}</text>
+        <text class="category-count">{{item.count}} 篇内容</text>
+      </view>
+      <image class="arrow-icon" src="/icons/s-arrow-g.svg"></image>
+    </view>
+  </view>
+</view>
