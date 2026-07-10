@@ -1,20 +1,29 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/cases/cases",
+    "pages/discover/discover",
+    "pages/gallery/gallery",
+    "pages/category/category",
+    "pages/article/article",
+    "pages/about/about",
+    "pages/matches/matches",
+    "pages/quiz/quiz",
+    "pages/timeline/timeline",
+    "pages/timeline/climb-path/climb-path",
+    "pages/webview/webview",
     "pages/logs/logs",
-    "pages/contact/contact"
+    "pages/article-webview/article-webview"
   ],
   "window": {
     "navigationBarTextStyle": "black",
-    "navigationBarTitleText": "Donut · 小程序多端框架",
+    "navigationBarTitleText": "樊振东的互联网档案馆",
     "navigationBarBackgroundColor": "#ffffff"
   },
   "tabBar": {
     "color": "#8a8a8a",
-    "selectedColor": "#1AAD19",
+    "selectedColor": "#1e88e5",
     "backgroundColor": "#ffffff",
-    "borderStyle": "black",
+    "borderStyle": "white",
     "list": [
       {
         "pagePath": "pages/index/index",
@@ -23,8 +32,14 @@
         "selectedIconPath": "images/house1.png"
       },
       {
-        "pagePath": "pages/contact/contact",
-        "text": "联系我们",
+        "pagePath": "pages/gallery/gallery",
+        "text": "照片墙",
+        "iconPath": "images/Icon4.png",
+        "selectedIconPath": "images/Icon3.png"
+      },
+      {
+        "pagePath": "pages/discover/discover",
+        "text": "发现",
         "iconPath": "images/bubble_circle.png",
         "selectedIconPath": "images/bubble_circle1.png"
       }
