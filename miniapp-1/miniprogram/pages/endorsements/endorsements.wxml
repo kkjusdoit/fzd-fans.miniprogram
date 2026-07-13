@@ -3,7 +3,7 @@
   <view class="hero">
     <text class="hero-badge">🤝 同行者</text>
     <text class="hero-title">与他并肩的球队，选择他的品牌</text>
-    <text class="hero-lead">从并肩作战的职业俱乐部，到横跨 {{stats.categories}} 个行业主动选择他的品牌——记录的不是他征服了多少，而是有多少球队与品牌，愿意与樊振东同行。</text>
+    <text class="hero-lead">运动器材、消费电子、高端汽车、奢侈时装、美妆护肤……从并肩作战的职业俱乐部，到横跨 {{stats.categories}} 个行业的品牌，樊振东赢得的信任早已越过乒乓球台的边界。记录的不是他征服了多少，而是有多少球队与品牌主动选择与他同行——看这份影响力如何一路破圈生长。</text>
     <view class="hero-stats">
       <view class="hs"><text class="n">{{stats.total}}</text><text class="l">同行伙伴</text></view>
       <view class="hs"><text class="n">{{stats.categories}}</text><text class="l">覆盖行业</text></view>
