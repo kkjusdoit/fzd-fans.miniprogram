@@ -17,27 +17,30 @@
     >{{item.icon}} {{item.label}}</view>
   </scroll-view>
 
-  <!-- 时间轴（图标圆点 + 左右交替 zigzag） -->
-  <view class="timeline" wx:if="{{visibleNews.length > 0}}">
+  <!-- 时间轴（按年分组 + 图标圆点） -->
+  <view class="timeline" wx:if="{{groups.length > 0}}">
     <view class="timeline-line"></view>
-    <view class="tl-item" wx:for="{{visibleNews}}" wx:key="index">
-      <view class="tl-dot" style="background:{{item.categoryColor}}">{{item.categoryIcon}}</view>
-      <view class="tl-card">
-        <view class="tl-meta">
-          <text class="tl-date">{{item.date}}</text>
-          <text class="tl-tag" style="background:{{item.categoryColor}}">{{item.categoryLabel}}</text>
+    <view class="year-group" wx:for="{{groups}}" wx:for-item="group" wx:key="year">
+      <view class="year-label"><text>{{group.year}}</text></view>
+      <view class="tl-item" wx:for="{{group.list}}" wx:key="index">
+        <view class="tl-dot" style="background:{{item.categoryColor}}">{{item.categoryIcon}}</view>
+        <view class="tl-card">
+          <view class="tl-meta">
+            <text class="tl-date">{{item.date}}</text>
+            <text class="tl-tag" style="background:{{item.categoryColor}}">{{item.categoryLabel}}</text>
+          </view>
+          <text class="tl-title">{{item.title}}</text>
+          <text class="tl-summary" wx:if="{{item.summary}}">{{item.summary}}</text>
+          <image
+            wx:if="{{item.image}}"
+            class="tl-img"
+            src="{{item.image}}"
+            mode="widthFix"
+            lazy-load="true"
+            data-src="{{item.image}}"
+            bindtap="onPreviewImage"
+          ></image>
         </view>
-        <text class="tl-title">{{item.title}}</text>
-        <text class="tl-summary" wx:if="{{item.summary}}">{{item.summary}}</text>
-        <image
-          wx:if="{{item.image}}"
-          class="tl-img"
-          src="{{item.image}}"
-          mode="widthFix"
-          lazy-load="true"
-          data-src="{{item.image}}"
-          bindtap="onPreviewImage"
-        ></image>
       </view>
     </view>
   </view>

@@ -56,6 +56,21 @@
   width: 3rpx;
   background: linear-gradient(to bottom, #1e88e5, #90caf9);
 }
+.year-label {
+  position: relative;
+  margin: 0 0 20rpx -30rpx;
+  z-index: 3;
+}
+.year-label text {
+  display: inline-block;
+  background: #1e88e5;
+  color: #fff;
+  font-weight: 700;
+  font-size: 28rpx;
+  padding: 4rpx 22rpx;
+  border-radius: 999rpx;
+  box-shadow: 0 3rpx 10rpx rgba(30, 136, 229, 0.25);
+}
 .tl-item {
   position: relative;
   margin-bottom: 34rpx;

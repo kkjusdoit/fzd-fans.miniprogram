@@ -63,11 +63,11 @@ Page({
 
   onShareAppMessage() {
     return {
-      title: '樊振东商业版图 · 樊振东的互联网档案馆',
+      title: '樊振东 · 同行者(效力球队与代言品牌) · 樊振东的互联网档案馆',
       path: '/pages/endorsements/endorsements'
     };
   },
   onShareTimeline() {
-    return { title: '樊振东商业版图 · 樊振东的互联网档案馆' };
+    return { title: '樊振东 · 同行者 · 樊振东的互联网档案馆' };
   }
 });

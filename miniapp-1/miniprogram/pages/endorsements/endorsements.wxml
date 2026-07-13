@@ -1,11 +1,11 @@
 <view class="container">
   <!-- 叙事英雄区 -->
   <view class="hero">
-    <text class="hero-badge">💼 商业版图</text>
-    <text class="hero-title">横跨 {{stats.categories}} 个行业的商业认可</text>
-    <text class="hero-lead">从器材到高奢、从科技到快消，樊振东以赛场实力赢得的品牌信任，早已越过乒乓球台的边界。</text>
+    <text class="hero-badge">🤝 同行者</text>
+    <text class="hero-title">与他并肩的球队，选择他的品牌</text>
+    <text class="hero-lead">从并肩作战的职业俱乐部，到横跨 {{stats.categories}} 个行业主动选择他的品牌——记录的不是他征服了多少，而是有多少球队与品牌，愿意与樊振东同行。</text>
     <view class="hero-stats">
-      <view class="hs"><text class="n">{{stats.total}}</text><text class="l">合作品牌</text></view>
+      <view class="hs"><text class="n">{{stats.total}}</text><text class="l">同行伙伴</text></view>
       <view class="hs"><text class="n">{{stats.categories}}</text><text class="l">覆盖行业</text></view>
       <view class="hs"><text class="n">{{stats.active}}</text><text class="l">进行中</text></view>
     </view>

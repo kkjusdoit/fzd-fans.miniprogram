@@ -12,11 +12,27 @@ interface NewsItem {
   source: string;
 }
 
+interface YearGroup {
+  year: string;
+  list: NewsItem[];
+}
+
+function groupByYear(list: NewsItem[]): YearGroup[] {
+  const groups: YearGroup[] = [];
+  list.forEach((n) => {
+    const year = (n.date || '').slice(0, 4) || '其他';
+    let g = groups.find((x) => x.year === year);
+    if (!g) { g = { year, list: [] }; groups.push(g); }
+    g.list.push(n);
+  });
+  return groups.sort((a, b) => Number(b.year) - Number(a.year));
+}
+
 Page({
   data: {
     categories: categories as any[],
     allNews: news as NewsItem[],
-    visibleNews: [] as NewsItem[],
+    groups: [] as YearGroup[],
     activeCat: 'all'
   },
 
@@ -32,13 +48,13 @@ Page({
   applyFilter(cat: string) {
     const all = this.data.allNews;
     const visible = cat === 'all' ? all : all.filter((n) => n.category === cat);
-    this.setData({ activeCat: cat, visibleNews: visible });
+    this.setData({ activeCat: cat, groups: groupByYear(visible) });
   },
 
   onPreviewImage(e: any) {
     const src = e.currentTarget.dataset.src as string;
     if (!src) return;
-    const urls = this.data.visibleNews.map((n) => n.image).filter(Boolean);
+    const urls = this.data.allNews.map((n) => n.image).filter(Boolean);
     wx.previewImage({ current: src, urls });
   },
 

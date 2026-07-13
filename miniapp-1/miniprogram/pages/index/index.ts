@@ -100,12 +100,12 @@ Component({
         icon: '📰'
       });
 
-      // 注入「商业版图」入口（数据来自 endorsements.js）
+      // 注入「同行者」入口（效力球队 + 品牌代言，数据来自 endorsements.js）
       categories.push({
         id: 'endorsements',
-        name: lang === 'zh' ? '商业版图' : 'Empire',
+        name: lang === 'zh' ? '同行者' : 'Companions',
         count: (endorsements as any[]).length,
-        icon: '💼'
+        icon: '🤝'
       });
 
       this.setData({
